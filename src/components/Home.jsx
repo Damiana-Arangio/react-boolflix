@@ -6,7 +6,9 @@ function Home() {
         RENDERING
     ***************/
     return (
-        <h1> Sono il componente Home mostrato da HomePage </h1>
+        <div className="container-page">
+            <h1> Sono il componente Home mostrato da HomePage </h1>
+        </div>
     )
 }
 

@@ -1,15 +1,78 @@
+/**********************
+    REGOLE GENERALI
+***********************/
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Stile testo generale */
 :root {
   font-size: 13px;
+  line-height: 1.5;
+}
+
+li {
+  list-style-type: none;
 }
 
 body {
-  font-size: 1rem;
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  margin: 0;
+  height: 100vh;
+  color: white;
+  background-color: #1B1B1B;
 }
 
+/*************************** 
+    CLASSI RIUTILIZZABILI
+****************************/
 
-/** HEADER */
-/* Navbar */
-nav ul {
-  list-style-type: none;
+/** Contenitori */
+
+/* Contenitore pagina */
+.container-page {
+  max-width: 1200px;
+  margin: 100px auto;
+}
+
+/***********
+    HEADER
+************/
+header {
+  width: 100%;
+  height: 13vh;
+  margin: 0 auto;
+  background-color: rgb(0, 0, 0);
+}
+
+header nav {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+header nav ul {
+  height: 100%;
+
+  /* Flex */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ nav a {
+  color: white;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+/*********
+    HOME
+**********/
+.btn-home {
+  width: 100px;
 }
