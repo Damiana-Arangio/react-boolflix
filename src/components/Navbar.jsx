@@ -4,7 +4,12 @@ import { NavLink } from "react-router-dom"                /* Import componente L
 
 /* Array di oggetti per generare dinamicamente i link della Navbar */
 const links = [
-    {  path: '/', label: 'Home' }
+    {  path: '/', label: 'Home' },
+    { path: '/SerieTvPage', label: 'Serie TV' },
+    { path: '/FilmPage', label: 'Film' },
+    { path: '/OriginaliPage', label: 'Originali' },
+    { path: '/AggiuntiDiRecentePage', label: 'Aggiunti di recente' },
+    { path: '/LaMiaListaPage', label: 'La mia lista' }
 ]
 
 
