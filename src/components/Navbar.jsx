@@ -68,6 +68,30 @@ function Navbar() {
     function handleSubmit(event) {
         event.preventDefault();                     // Blocco refresh Pagina
         console.log("Chiamata API ricerca film");
+
+        if (InputSearchbar === "") {
+            console.log("Campo di ricerca vuoto");
+        }
+        else {
+            fetchRicercaFilm(InputSearchbar);                // Chiamara funzione per cercare un film
+        }
+    }
+
+    // Funzione che prende in input il testo digitato nella navbar e fa una chiamata API
+    function fetchRicercaFilm(InputSearchbar) {
+
+        const apiUrl = import.meta.env.VITE_API_URL;
+        const apiKey = import.meta.env.VITE_API_KEY;
+        const url = `${apiUrl}/search/movie?api_key=${apiKey}&language=it_IT&query=${InputSearchbar.trim()}`;
+
+        /* Richiesta API per ottenere film in base all'input digitato nella barra di ricerca */
+            axios.get(url)
+            .then( response => {
+                console.log("Risultati trovati:", response.data.results);
+            })
+            .catch( error => {
+                console.error("Errore nella chiamata API:", error);
+            });
     }
 }
 
